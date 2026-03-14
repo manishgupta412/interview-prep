@@ -4,6 +4,10 @@ const cors = require("cors")
 
 const app = express()
 
+app.get("/", (req, res) => {
+  res.send("Interview Prep API is running 🚀");
+});
+
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
