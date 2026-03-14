@@ -10,7 +10,10 @@ app.get("/", (req, res) => {
 
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({origin:"*",
+app.use(cors({origin: [
+    "http://localhost:5173",
+    "https://interview-prep-1-3dmn.onrender.com"
+  ],
     credentials: true
 }))
 
