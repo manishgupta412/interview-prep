@@ -10,10 +10,7 @@ app.get("/", (req, res) => {
 
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({origin: [
-    "http://localhost:5173",
-    "https://your-frontend-url.onrender.com"
-  ],
+app.use(cors({origin:"*",
     credentials: true
 }))
 
